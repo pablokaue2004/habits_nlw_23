@@ -88,7 +88,7 @@ export async function appRoutes(app: FastifyInstance) {
       }
     })
 
-    if(!day) {
+    if (!day) {
       day = await prisma.day.create({
         data: {
           date: today
@@ -105,7 +105,7 @@ export async function appRoutes(app: FastifyInstance) {
       }
     })
 
-    if(dayHabit) {
+    if (dayHabit) {
       await prisma.dayHabit.delete({
         where: {
           id: dayHabit.id
